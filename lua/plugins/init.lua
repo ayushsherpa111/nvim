@@ -27,7 +27,7 @@ return {
 
 	{
 		"mfussenegger/nvim-lint",
-		event = { "BufReadPre", "BufNewFile", "BufWritePre" },
+		event = "VeryLazy",
 		config = function()
 			require("configs.lint")
 		end,

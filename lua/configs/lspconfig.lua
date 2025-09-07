@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 
-local servers = { "lua_ls", "html", "cssls", "gopls", "jedi_language_server", "clangd", "bicep", "buf_ls" }
+local servers =
+	{ "lua_ls", "html", "cssls", "gopls", "jedi_language_server", "clangd", "bicep", "buf_ls", "dockerls", "ts_ls" }
 local nvlsp = require("nvchad.configs.lspconfig")
 
 -- lsps with default config
@@ -28,6 +29,7 @@ lspconfig.lua_ls.setup({
 
 lspconfig.clangd.setup({
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+	diagnostics = false,
 })
 
 lspconfig.gopls.setup({
@@ -49,6 +51,16 @@ lspconfig.gopls.setup({
 			completeUnimported = true,
 			usePlaceholders = true,
 			staticcheck = true,
+		},
+	},
+})
+
+lspconfig.ts_ls.setup({
+	on_attach = nvlsp.on_attach,
+	capabilities = nvlsp.capabilities,
+	init_options = {
+		preferences = {
+			disableSuggestions = true,
 		},
 	},
 })
