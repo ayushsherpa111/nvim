@@ -7,9 +7,9 @@ local M = {}
 
 M.plugins = "plugins"
 M.base46 = {
-	theme = "carbonfox",
+	theme = "tokyodark",
 	transparency = false,
-	theme_toggle = { "carbonfox", "ayu_dark" },
+	theme_toggle = { "tokyodark", "ayu_dark" },
 
 	hl_override = {
 		Comment = { italic = true, bold = true },
@@ -33,11 +33,12 @@ M.mason = {
 		"flake8",
 		"stylua",
 		"prettier",
-		"gofmt",
+		"gofumpt",
 		"gopls",
 		"black",
-		"golangcilint",
+		"golangci-lint",
 		"buf",
+		"typescript-language-server",
 	},
 }
 

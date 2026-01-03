@@ -56,6 +56,7 @@ lspconfig.gopls.setup({
 })
 
 lspconfig.ts_ls.setup({
+	cmd = { "/home/ssjsherpa/.bun/bin/typescript-language-server", "--stdio" },
 	on_attach = nvlsp.on_attach,
 	capabilities = nvlsp.capabilities,
 	init_options = {
