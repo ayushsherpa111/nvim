@@ -7,9 +7,9 @@ local M = {}
 
 M.plugins = "plugins"
 M.base46 = {
-	theme = "tokyodark",
+	theme = "kanagawa",
 	transparency = false,
-	theme_toggle = { "tokyodark", "ayu_dark" },
+	theme_toggle = { "kanagawa", "ayu_dark" },
 
 	hl_override = {
 		Comment = { italic = true, bold = true },

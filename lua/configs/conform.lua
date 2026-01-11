@@ -1,4 +1,9 @@
 local options = {
+	formatters = {
+		prettier = {
+			command = vim.fn.expand("$HOME/.bun/bin/prettier"),
+		},
+	},
 	formatters_by_ft = {
 		lua = { "stylua" },
 		css = { "prettier" },
